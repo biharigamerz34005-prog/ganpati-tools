@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>गणपति मशीन एंड टूल्स - Ganpati Machine & Tools</title>
+    <style>
+        /* CSS Styles - Yellow & White Theme */
+        :root {
+            --primary-yellow: #ffcc00;
+            --dark-yellow: #e6b800;
+            --light-yellow: #fff9e6;
+            --white: #ffffff;
+            --text-color: #333333;
+            --gray-border: #e0e0e0;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body { background-color: #fafafa; color: var(--text-color); }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--primary-yellow);
+            padding: 15px 5%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        .logo h1 { font-size: 26px; color: #000; }
+        .logo p { font-size: 13px; color: #444; }
+        nav ul { display: flex; list-style: none; flex-wrap: wrap; }
+        nav ul li { margin-left: 10px; }
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover { background-color: var(--white); }
+
+        /* Banner */
+        .hero {
+            background-color: var(--light-yellow);
+            border-bottom: 3px solid var(--primary-yellow);
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .hero h2 { font-size: 32px; margin-bottom: 10px; }
+        .hero p { font-size: 18px; color: #555; }
+        .hero .btn {
+            display: inline-block;
+            margin-top: 20px;
+            background: var(--primary-yellow);
+            color: #000;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* Container */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .section-title {
+            text-align: center;
+            font-size: 26px;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-yellow);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .product-card {
+            background-color: var(--white);
+            border: 1px solid var(--gray-border);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+
+        /* Photo Slot */
+        .img-slot {
+            width: 100%;
+            height: 200px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid var(--primary-yellow);
+            overflow: hidden;
+            color: #999;
+            font-weight: bold;
+        }
+        .img-slot img { width: 100%; height: 100%; object-fit: cover; }
+        .product-info { padding: 15px; }
+        .product-info h3 { font-size: 18px; margin-bottom: 8px; }
+        .product-info p { font-size: 14px; color: #666; }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <h1>गणपति मशीन & टूल्स</h1>
+            <p>Ganpati Machine & Tools | Gopalganj</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">होम</a></li>
+                <li><a href="#products">प्रोडक्ट्स</a></li>
+                <li><a href="#contact">संपर्क</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <h2>हर मशीन, हर टूल - एक ही जगह</h2>
+    <p>क्वालिटी मशीनरी और पावर टूल्स के लिए भरोसेमंद नाम</p>
+    <a href="tel:9876543210" class="btn">अभी कॉल करें</a>
+</section>
+
+<div class="container" id="products">
+    <h2 class="section-title">हमारे प्रोडक्ट्स</h2>
+    <div class="products-grid">
+        <div class="product-card">
+            <div class="img-slot"><span>Photo 1</span></div>
+            <div class="product-info"><h3>वेल्डिंग मशीन</h3><p>हैवी ड्यूटी वेल्डिंग मशीन सभी साइज में उपलब्ध।</p></div>
+        </div>
+        <div class="product-card">
+            <div class="img-slot"><span>Photo 2</span></div>
+            <div class="product-info"><h3>ड्रिल मशीन</h3><p>Bosch, Stanley और अन्य ब्रांडेड ड्रिल मशीन।</p></div>
+        </div>
+        <div class="product-card">
+            <div class="img-slot"><span>Photo 3</span></div>
+            <div class="product-info"><h3>कटर मशीन</h3><p>मार्बल कटर, ग्राइंडर और कट ऑफ मशीन।</p></div>
+        </div>
+        <div class="product-card">
+            <div class="img-slot"><span>Photo 4</span></div>
+            <div class="product-info"><h3>हैंड टूल्स</h3><p>सभी प्रकार के हाथ औजार और स्पेयर पार्ट्स।</p></div>
+        </div>
+    </div>
+</div>
+
+<footer id="contact">
+    <p><strong>गणपति मशीन एंड टूल्स, गोपालगंज, बिहार</strong></p>
+    <p>Mobile: +91-98765 43210 | Email: ganpatitools@gmail.com</p>
+    <p style="margin-top:10px; font-size:12px; opacity:0.7;">© 2026 Ganpati Machine & Tools. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
